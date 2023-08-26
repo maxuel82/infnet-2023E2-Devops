@@ -18,6 +18,12 @@ namespace Aula20230826.Controllers
             _logger = logger;
         }
 
+        public WeatherForecastController() 
+        {
+             //criamos um construtor vazio so para facilitar o teste unitario. ignorar a questao do log.
+        }
+
+
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
