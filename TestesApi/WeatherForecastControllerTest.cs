@@ -10,7 +10,8 @@ namespace TestesApi
             var controller = new WeatherForecastController();
 
             var result = controller.Get();
-            Assert.True(result.Count() > 0);          
+            //resolvendo coldesmall01
+            Assert.True(result.Any());          
             
         }
     }
