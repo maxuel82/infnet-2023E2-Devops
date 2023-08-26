@@ -5,7 +5,7 @@ name: .NET
 
 on:
   push:
-    branches: [ "features/*" ]
+    branches: [ "features/*","feature/*"]
   
 jobs:
   build:
