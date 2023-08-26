@@ -11,17 +11,8 @@ namespace Aula20230826.Controllers
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-        //removendo 02codesmall atributo  e contrutor que utilize o atributo
-        //private readonly ILogger<WeatherForecastController> _logger;
-
-        //public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        //{
-        //    _logger = logger;
-        //}
-
         public WeatherForecastController() 
         {
-             //criamos um construtor vazio so para facilitar o teste unitario. ignorar a questao do log.
         }
 
 
