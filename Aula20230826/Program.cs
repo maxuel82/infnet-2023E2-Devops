@@ -22,8 +22,8 @@ builder.Services.AddHealthChecks()
                     name: "Database",
                     failureStatus: Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy
                 )*/
-                .AddUrlGroup(new Uri("http://httpbin.org/status/200"), "Api Terceiro não autenticada")
-                .AddUrlGroup(uri: new Uri("http://viacep.com.br/ws/01001000/json/"), "Api Publica Cep não autenticada")
+                .AddUrlGroup(new Uri("http://httpbin.org/status/200"), "Api Terceiro nï¿½o autenticada")
+                .AddUrlGroup(uri: new Uri("http://viacep.com.br/ws/01001000/json/"), "Api Publica Cep nï¿½o autenticada")
                 .AddCheck<HealthCheckRandom>(name: "Api Terceiro Autenticada");
                 
 
