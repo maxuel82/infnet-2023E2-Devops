@@ -5,6 +5,7 @@ on:
       - features/*
       - feature/*
       - pre-release/*
+      - master
 jobs:
   build:
     name: Build and analyze
