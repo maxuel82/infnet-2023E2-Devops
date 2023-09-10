@@ -16,12 +16,6 @@ builder.Services.AddSwaggerGen();
 
 //Add Health Check
 builder.Services.AddHealthChecks()
-                /*.AddSqlServer(
-                    connectionString: builder.Configuration.GetConnectionString("InfnetPosDb"),
-                    healthQuery: "SELECT 1",
-                    name: "Database",
-                    failureStatus: Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy
-                )*/
                 .AddUrlGroup(new Uri("http://httpbin.org/status/200"), "Api Terceiro n�o autenticada")
                 .AddUrlGroup(uri: new Uri("http://viacep.com.br/ws/01001000/json/"), "Api Publica Cep n�o autenticada")
                 .AddCheck<HealthCheckRandom>(name: "Api Terceiro Autenticada");
@@ -33,6 +27,7 @@ builder.Services.AddHealthChecksUI(s =>
     
 })
 .AddInMemoryStorage();
+builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPINSIGHTS_CONNECTIONSTRING"]);
 
 
 var app = builder.Build();
